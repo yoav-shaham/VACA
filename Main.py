@@ -1,6 +1,6 @@
 # -----------------------imports-----------------
 
-import streaming
+import Voice_Recognition as streaming
 import pyttsx
 
 # -----------------------------------------------
