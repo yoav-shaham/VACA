@@ -24,17 +24,16 @@ Example usage:
 
 # [START import_libraries]
 from __future__ import division
-
+import oauth2.
 import re
 import sys
-
 from google.cloud import speech
 from google.cloud.speech import enums
 from google.cloud.speech import types
 import pyaudio
 from six.moves import queue
 # [END import_libraries]
-
+key="AIzaSyBZh4ZPUWldAfTciUCIVaFA9NsTaFjcVw4"
 # Audio recording parameters
 RATE = 16000
 CHUNK = int(RATE / 10)  # 100ms
@@ -161,6 +160,7 @@ def listen_print_loop(responses):
 def main():
     # See http://g.co/cloud/speech/docs/languages
     # for a list of supported languages.
+    credentials = oauth2.credentials.Credentials(key)
     language_code = 'en-GB'  # a BCP-47 language tag
     time_out=0
     client = speech.SpeechClient()

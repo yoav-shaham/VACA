@@ -4,10 +4,12 @@ import Voice_Recognition as streaming
 import pyttsx
 
 # -----------------------------------------------
-
+"""
+ was not sure wether to use sphinx or google cloud decided on google because sphinx was very bad
+"""
 # ------------------------variables--------------
 name = "Amy"
-
+key="AIzaSyBZh4ZPUWldAfTciUCIVaFA9NsTaFjcVw4"
 # -----------------------------------------------
 
 
