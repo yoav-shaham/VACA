@@ -23,8 +23,12 @@ Example usage:
 """
 
 # [START import_libraries]
+
 from __future__ import division
-import oauth2.
+from oauth2client.client import GoogleCredentials
+from google.oauth2 import service_account
+import requests
+import os
 import re
 import sys
 from google.cloud import speech
@@ -156,11 +160,13 @@ def listen_print_loop(responses):
             num_chars_printed = 0
             return command
 
-
+def key_confirmation():
+    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "C:\Users\Cyber-01\Desktop\First PA-d831b79de2cb.json"
 def main():
     # See http://g.co/cloud/speech/docs/languages
     # for a list of supported languages.
-    credentials = oauth2.credentials.Credentials(key)
+
+    key_confirmation()
     language_code = 'en-GB'  # a BCP-47 language tag
     time_out=0
     client = speech.SpeechClient()
